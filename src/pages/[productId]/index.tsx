@@ -4,6 +4,7 @@ import { ProductDetailsType } from "types/productDetails";
 import { ProductGetStaticPathType } from "types/productGetStaticPaths";
 import { get } from "../../../modules/httprequest";
 import { NextPage } from "next";
+import Image from 'next/image'
 
 type Props = {
   product: ProductDetailsType;
@@ -17,7 +18,7 @@ const ProductDetail: NextPage<Props> = ({ product }) => {
   return (
     <div className="container border bg-white p-8 rounded-xl w-96 m-10">
       <div className="top">
-        <img
+        <Image
           src={product.imageList[0].image}
           alt="img"
           width={250}

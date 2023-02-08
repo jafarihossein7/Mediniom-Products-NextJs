@@ -22,8 +22,6 @@ const Products: NextPage<Props> = ({ productsResponse }) => {
   useEffect(() => {
     if (router.isReady) {
       let page = router.query.page;
-      console.log(page);
-
       if (page) {
         setpageNumber(Number(page));
         setloading(true);
